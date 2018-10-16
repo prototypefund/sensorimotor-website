@@ -1,0 +1,37 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+title = "My New Hugo Site"
+theme = "hugo-theme-learn"
+
+name = "Test!"
+license = "MIT"
+homepage = "https://suprememachines.de"
+repo = "https://github.com/sensorimotor/docs"
+min_version = 0.42
+
+[params]
+  editURL = "https://github.com/sensorimotor/"
+  description = "Sensorimotor Documentation"
+  themeVariant = "green"
+
+[outputs]
+  home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+name = "Test!"
+title = "Sensorimotor Documentation"
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
+
+[Languages.de]
+name = "Test!"
+title = "Sensorimotor Dokumentation"
+languageName = "German"
