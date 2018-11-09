@@ -19,17 +19,6 @@ min_version = 0.49
   home = [ "HTML", "RSS", "JSON"]
 
 [Languages]
-[Languages.en]
-name = "Sensorimotor"
-title = "Sensorimotor"
-languageName = "English"
-
-[[Languages.en.menu.shortcuts]]
-name = "<i class='fab fa-fw fa-github'></i> Source code"
-identifier = "ds"
-url = "https://github.com/sensorimotor/website/"
-weight = 10
-
 [Languages.de]
 name = "Sensorimotor"
 title = "Sensorimotor"
