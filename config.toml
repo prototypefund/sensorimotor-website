@@ -11,7 +11,7 @@ repo = "https://github.com/sensorimotor/docs"
 min_version = 0.49
 
 [params]
-  editURL = "https://github.com/sensorimotor/"
+  editURL = "https://github.com/sensorimotor/website/edit/master/content/"
   description = "Sensorimotor Documentation"
   themeVariant = "sensorimotor"
 
