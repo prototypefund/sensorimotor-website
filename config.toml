@@ -13,7 +13,7 @@ min_version = 0.49
 [params]
   editURL = "https://github.com/sensorimotor/"
   description = "Sensorimotor Documentation"
-  themeVariant = "green"
+  themeVariant = "sensorimotor"
 
 [outputs]
   home = [ "HTML", "RSS", "JSON"]
