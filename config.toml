@@ -24,6 +24,14 @@ name = "Sensorimotor"
 title = "Sensorimotor"
 languageName = "German"
 
+
+[[Languages.de.menu.shortcuts]]
+name = "<i class='fas fa-envelope'></i></i> Impressum"
+identifier = "cn"
+url = "/contact"
+weight = 11
+
+
 [[Languages.de.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Source code"
 identifier = "ds"

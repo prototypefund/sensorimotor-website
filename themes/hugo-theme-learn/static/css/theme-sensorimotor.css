@@ -72,6 +72,7 @@ a:hover {
 }
 #sidebar {
 	background-color: var(--MENU-SECTIONS-BG-color);
+	text-align: left;
 }
 #sidebar #header-wrapper {
     background: var(--MENU-HEADER-BG-color);
