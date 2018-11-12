@@ -26,7 +26,7 @@ languageName = "German"
 
 
 [[Languages.de.menu.shortcuts]]
-name = "<i class='fas fa-envelope'></i></i> Impressum"
+name = "<i class='fas fa-envelope'></i></i> &nbsp;Impressum"
 identifier = "cn"
 url = "/contact"
 weight = 11
