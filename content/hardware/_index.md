@@ -5,8 +5,6 @@ weight = 1
 pre = "<b>1. </b>"
 +++
 
-### Chapter 1
-
-# Basics
+### Hardware
 
 Learn about how to use the hardware

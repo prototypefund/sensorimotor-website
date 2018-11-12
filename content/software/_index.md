@@ -9,4 +9,4 @@ pre = "<b>2. </b>"
 
 # Basics
 
-Learn aboout how to use the software
+Learn how to use the software
