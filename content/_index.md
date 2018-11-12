@@ -1,7 +1,11 @@
-<div class="page">
++++
+title = "Tutorials"
++++
 <h1 class="mainpage_header">Sensorimotor</h1>
+
+<h2 class="header">Über unser Projekt</h2>
+
 <div class="content-spacing">
-<h4> Über unser Projekt</h4>
 <p>
 Wir entwickeln Open-Source-free-Design Hardware und Software für Robotik-Antriebe und wollen so die vielen kleinen Robotik-Projekte weltweit fördern und durch kostengünstige und modifikationsfreundliche Hardware die Kreativität der Entwickler*innen, Forscher*innen und Bastler*innen anregen und sie ein Stück weit unabhängiger von bestehenden industriellen Lösungen machen. Wir haben unsere Wurzeln in der universitären Robotik-Forschung und in der Maker-Szene und möchten unsere Entwicklungen den Robotikenthusiasten weltweit zugänglich machen.</p>
 <p>

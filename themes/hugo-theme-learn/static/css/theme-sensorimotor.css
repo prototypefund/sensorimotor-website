@@ -134,3 +134,7 @@ a:hover {
 #breadcrumbs {
 	text-align: left;
 }
+
+.header{
+	border-bottom: 4px solid #FF1495;
+}
