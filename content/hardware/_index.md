@@ -5,6 +5,8 @@ weight = 1
 pre = "<b>1. </b>"
 +++
 
-### Hardware
+# Hardware
 
 Learn how to use the hardware
+
+![Sensorimotor Platine](/images/chained.jpg)

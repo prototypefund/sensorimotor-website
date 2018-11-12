@@ -5,8 +5,7 @@ weight = 2
 pre = "<b>2. </b>"
 +++
 
-### Chapter 2
-
-# Basics
+# Software
 
 Learn how to use the software
+![Symbolbild_Quellcode](/images/code.png)
