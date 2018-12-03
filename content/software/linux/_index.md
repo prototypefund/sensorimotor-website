@@ -1,3 +1,6 @@
++++
+title = "Linux"
++++
 Setup unter Debian
 
 Unterstützte version: 9 (Stretch)

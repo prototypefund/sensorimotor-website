@@ -1,3 +1,6 @@
++++
+title = "Windows"
++++
 Setup unter Windows
 
 Unterstützte version: 7, 8, 10
