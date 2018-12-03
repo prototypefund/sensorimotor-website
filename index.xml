@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Sensorimotor</title>
+    <link>https://sensorimotor.de/</link>
+    <description>Recent content in Introduction on Sensorimotor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://sensorimotor.de/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Choose your servo-motor</title>
+      <link>https://sensorimotor.de/hardware/choose_servo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sensorimotor.de/hardware/choose_servo/</guid>
+      <description>The Sensorimotor-board is designed to work with most of the standard servo-motors that are easily available.
+   Motor-type Requirements     Standard-servo-motor Potentiometer    operating voltage up to 12V    drive current up to 6A   DC-motor single-phase    operating voltage up to 12V    drive current up to 6A   Solenoid operating voltage up to 12V    drive current up to 6A    Tested with:</description>
+    </item>
+    
+    <item>
+      <title>Robotic Arm</title>
+      <link>https://sensorimotor.de/tutorials/robotic_arm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sensorimotor.de/tutorials/robotic_arm/</guid>
+      <description>Our robotic arm is based on the MeArm PI.</description>
+    </item>
+    
+    <item>
+      <title>Prepare servo-motor</title>
+      <link>https://sensorimotor.de/hardware/prepare_servo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sensorimotor.de/hardware/prepare_servo/</guid>
+      <description>To attach the Sensorimotor-board to your servo-motor you have to detach the control board of your servo. Unscrew the cover at the back of your servo.
+Remove the control board desoldering the connections to the Potentiometer.
+Desolder the cables running from the motor to the control board.
+Solder new cable to the Potentiometer.
+Connect Potentiometer and motor to the Sensorimotor-board.</description>
+    </item>
+    
+    <item>
+      <title>Impressum</title>
+      <link>https://sensorimotor.de/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sensorimotor.de/contact/</guid>
+      <description>Angaben gemäß § 5 TMG JustScheunemann Sensorimotor GbR Gubener Str. 54
+10243 Berlin  Vertreten durch: 
+Felix Just
+Email</description>
+    </item>
+    
+  </channel>
+</rss>

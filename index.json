@@ -1,0 +1,92 @@
+[
+{
+	"uri": "https://sensorimotor.de/hardware/choose_servo/",
+	"title": "Choose your servo-motor",
+	"tags": [],
+	"description": "",
+	"content": "The Sensorimotor-board is designed to work with most of the standard servo-motors that are easily available.\n   Motor-type Requirements     Standard-servo-motor Potentiometer    operating voltage up to 12V    drive current up to 6A   DC-motor single-phase    operating voltage up to 12V    drive current up to 6A   Solenoid operating voltage up to 12V    drive current up to 6A    Tested with:\nServo-motor Blue Bird BMS-L530MG\nDC-motor YG300R\n"
+},
+{
+	"uri": "https://sensorimotor.de/hardware/",
+	"title": "Hardware",
+	"tags": [],
+	"description": "",
+	"content": " Hardware Learn how to use the hardware\n"
+},
+{
+	"uri": "https://sensorimotor.de/tutorials/robotic_arm/",
+	"title": "Robotic Arm",
+	"tags": [],
+	"description": "",
+	"content": "Our robotic arm is based on the MeArm PI.\n"
+},
+{
+	"uri": "https://sensorimotor.de/hardware/prepare_servo/",
+	"title": "Prepare servo-motor",
+	"tags": [],
+	"description": "",
+	"content": "To attach the Sensorimotor-board to your servo-motor you have to detach the control board of your servo. Unscrew the cover at the back of your servo.\nRemove the control board desoldering the connections to the Potentiometer.\nDesolder the cables running from the motor to the control board.\nSolder new cable to the Potentiometer.\nConnect Potentiometer and motor to the Sensorimotor-board.\n"
+},
+{
+	"uri": "https://sensorimotor.de/software/",
+	"title": "Software",
+	"tags": [],
+	"description": "",
+	"content": " Software Learn how to use the software "
+},
+{
+	"uri": "https://sensorimotor.de/tutorials/",
+	"title": "Tutorials",
+	"tags": [],
+	"description": "",
+	"content": " Tutorials Examples how to implement a Sensorimotor into your own project.\n"
+},
+{
+	"uri": "https://sensorimotor.de/docs/",
+	"title": "Documents",
+	"tags": [],
+	"description": "",
+	"content": "ToDo: circuit diagram\n"
+},
+{
+	"uri": "https://sensorimotor.de/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://sensorimotor.de/contact/",
+	"title": "Impressum",
+	"tags": [],
+	"description": "",
+	"content": "Angaben gemäß § 5 TMG JustScheunemann Sensorimotor GbR Gubener Str. 54\n10243 Berlin  Vertreten durch: \nFelix Just\nEmail\n"
+},
+{
+	"uri": "https://sensorimotor.de/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Sensorimotor About us We develop open-source-free-design hardware and software for robotic drives and thus want to promote the many small robotics projects worldwide and stimulate the creativity of developers, researchers and hobbyists through cost-effective and modification-friendly hardware and make them a little more independent from existing industrial solutions. We have our roots in university robotics research and the maker scene and we want to make our developments accessible to robotics enthusiasts worldwide.\nRobots and AI are finding their way into our everyday lives. We believe that development can be beneficial and safe for humanity - if the underlying technology is free of the interests of the few and placed in the hands of researchers and developers worldwide. For this, free hardware designs are crucial, because they strengthen the freedom of users and give them back control of their hardware. With free hardware designs, machines can finally be repaired and modified again. We want to contribute to the democratization of robotics by developing a completely free hardware design and software for robotic drives\nThe goal of our project is to enable users to turn simple motors into SmartServos and thus make them suitable for any robotics task. For this we have developed a board that is compatible with numerous DC motors and can be connected with minimal effort. It provides users with rich sensory feedback from the engine (angle, temperature, current, voltage) and a variety of control modes that provide precise position, speed and torque control.\nCommunication with the motors takes place via a standardized bus system. As a result, up to 256 motors can be coupled together over a distance of up to one kilometer and controlled by a single host controller, which is particularly advantageous for automation and robotics projects. The firmware is written in C / C ++ and we use an open-source build / test system. We have developed a board that is compatible with numerous DC motors and can be connected with minimal effort. It provides users with rich sensory feedback from the engine (angle, temperature, current, voltage) and a variety of control modes that provide precise position, speed and torque control.\nThe current goal is to supplement the finished hardware with necessary software and thus make it usable for everyone. With an Arduino-compatible C / C ++ library and a Raspberry Pi-compatible Python library, all motors in the bus could be conveniently controlled for many different projects.\nWe want to offer an alternative to existing high-priced closed-source SmartServos. Our free hardware makes it possible to study, modify and apply this technology to this technology. This gives more independence and opportunities, especially for smaller, non-financially sound projects, because: free hardware enables everybody .\nOur target group are scientists, trainers, makers and developers of smaller companies, especially in structurally weaker regions. Free-design hardware offers the possibility of modification and in-house production and, as a result, the promotion of independent developments. Extensive documentation, tutorials and publication of all circuit diagrams on a platform such as GitHub will enable a worldwide exchange of knowledge.\n"
+},
+{
+	"uri": "https://sensorimotor.de/software/linux/",
+	"title": "Linux",
+	"tags": [],
+	"description": "",
+	"content": " Setup on Debian\nsupported version: 9 (Stretch)\nThe software consists of - \u0026ldquo;libsensorimotor\u0026rdquo;, a core library, written in C++ - \u0026ldquo;pysensorimotor\u0026rdquo;, a Python wrapper for easy development - embedded-firmware, which runs on the micro-controller and doesn\u0026rsquo;t need to be modifyed (but can)\nDependencies:\n C and C++ Compiler: sudo apt install build-essential Python3.6+ sudo apt install python3-dev Scons sudo apt install scons  compile libraries:\n# check out the latest stable version (\u0026quot;master\u0026quot;) git clone https://git.suprememachines.de/supreme/libsensorimotor.git # go to project directory cd libsensorimotor # build scons  library use:\nPython: from src.sensorimotor import Sensorimotor # Motors represents the RS485 Bus with all motors motors = Sensorimotor(number_of_motors=2) # Limit both motors to low voltage motors.set_voltage_limit([0.55, 0.55]) # Activate motors motors.start() # Move both motors to position 0.0 motors.set_position([0.0, 0.0]) # Get a tuple with actual motor-positions motors.print_position(motors.get_position()) # Deactivate motors, no more movements will be executed motors.stop()  An instance of the class Sensorimotor represents a strand of motors and controls the communication between them.\nThere are different modes that a motor can be in:\n Position -\u0026gt; target-position the motor the motor moves to Velocity -\u0026gt; target-velocity to be reached. Hold -\u0026gt; uses the delay-modus CSL  The mode can be changed by sending the dedicated command. For example \u0026ldquo;set_position\u0026rdquo; automatically switches to popsition-mode.\nadditional commands that can be send to the motors:\n set_voltage_limit Limit the output voltage to the motor (p.e. if you want to use a 5V-motor) set_limits limits the range of motion of your servo.  C++ The same methods are defined in the \u0026lsquo;sensorimotor.so\u0026rsquo; library, therefor the usage is analogous to the python library\n "
+},
+{
+	"uri": "https://sensorimotor.de/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://sensorimotor.de/software/windows/",
+	"title": "Windows",
+	"tags": [],
+	"description": "",
+	"content": " Setup on a Windows system\nsupported version: 7, 8, 10.\nThe software consists of - \u0026ldquo;libsensorimotor\u0026rdquo;, a core library, written in C++ - \u0026ldquo;pysensorimotor\u0026rdquo;, a Python wrapper for easy development - embedded-firmware, which runs on the micro-controller and doesn\u0026rsquo;t need to be modifyed (but can)\nDependencies:\n C and C++ Compiler: mingw (latest stable version) Python3.6+ Scons (Production version) Git Development IDE (z.B. Code::Blocks))  compile libraries:\ncheck out the latest stable version (\u0026ldquo;master\u0026rdquo;) if git is installed at $PATH you can do that with the following terminal command:\ngit clone https://git.suprememachines.de/supreme/libsensorimotor.git  build with scons, terminal command:\nscons  library use:\nPython: from src.sensorimotor import Sensorimotor # Motors represents the RS485 Bus with all motors motors = Sensorimotor(number_of_motors=2) # Limit both motors to low voltage motors.set_voltage_limit([0.55, 0.55]) # Activate motors motors.start() # Move both motors to position 0.0 motors.set_position([0.0, 0.0]) # Get a tuple with actual motor-positions motors.print_position(motors.get_position()) # Deactivate motors, no more movements will be executed motors.stop()  An instance of the class Sensorimotor represents a strand of motors and controls the communication between them.\nThere are different modes that a motor can be in:\n Position -\u0026gt; target-position the motor the motor moves to Velocity -\u0026gt; target-velocity to be reached. Hold -\u0026gt; uses the delay-modus CSL  The mode can be changed by sending the dedicated command. For example \u0026ldquo;set_position\u0026rdquo; automatically switches to popsition-mode.\nadditional commands that can be send to the motors:\n set_voltage_limit Limit the output voltage to the motor (p.e. if you want to use a 5V-motor) set_limits limits the range of motion of your servo.  C++ The same methods are defined int the \u0026lsquo;sensorimotor.so\u0026rsquo; library, therefor the uage is analogous to the python library\n "
+}]

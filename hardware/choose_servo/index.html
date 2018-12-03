@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.49.2" />
+    <meta name="description" content="Sensorimotor Documentation">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Choose your servo-motor :: Sensorimotor</title>
+
+    
+    <link href="/css/nucleus.css?1543845150" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1543845150" rel="stylesheet">
+    <link href="/css/hybrid.css?1543845150" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1543845150" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1543845150" rel="stylesheet">
+    <link href="/css/auto-complete.css?1543845150" rel="stylesheet">
+    <link href="/css/theme.css?1543845150" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1543845150" rel="stylesheet">
+    
+      <link href="/css/theme-sensorimotor.css?1543845150" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1543845150"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/hardware/choose_servo/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://sensorimotor.de">
+	<div h3 class="logo">
+	<svg version="1.1" viewBox="-200 0 1039.99998 639.99997" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<metadata>
+	<rdf:RDF>
+	<cc:Work rdf:about="">
+	<dc:format>image/svg+xml</dc:format>
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+	<dc:title/>
+	</cc:Work>
+	</rdf:RDF>
+	</metadata>
+	<g transform="translate(-65.081 -178.96)">
+	<path transform="translate(65.081 178.96)" d="m496.45 3.3652c-26.386 0-51.4 3.847-75.037 11.543-23.088 7.1463-43.152 17.317-60.193 30.51-17.041 12.643-30.509 28.035-40.404 46.176s-14.842 37.93-14.842 59.369c0 20.339 4.1233 39.029 12.369 56.07 8.2458 16.491 18.691 32.434 31.334 47.826 12.643 14.842 26.111 29.96 40.404 45.352 14.842 14.842 28.583 30.509 41.227 47 12.644 15.942 23.089 33.532 31.334 52.771 8.2458 18.69 12.369 39.854 12.369 63.492 0 34.632-8.7959 61.294-26.387 79.984-17.591 18.141-40.404 27.211-68.439 27.211-26.386 0-46.725-7.1469-61.018-21.439-13.743-14.293-20.613-31.882-20.613-52.771 0-14.293 3.0217-26.386 9.0684-36.281 6.0467-10.445 13.744-18.691 23.09-24.738 9.345-6.5966 19.788-11.269 31.332-14.018 11.544-3.2983 23.089-4.9473 34.633-4.9473-1.6492-10.445-4.947-19.24-9.8945-26.387-4.9475-7.1463-10.994-12.642-18.141-16.49-6.5963-4.3977-14.018-7.4212-22.264-9.0703-7.6962-1.6492-15.117-2.4746-22.264-2.4746-14.292 0-28.859 3.0235-43.701 9.0703-14.293 5.4971-27.212 14.018-38.756 25.562-11.544 10.994-20.889 25.012-28.035 42.053-7.1462 17.041-10.719 36.556-10.719 58.545 0 25.287 4.6726 46.726 14.018 64.316 9.3454 17.591 21.988 32.157 37.93 43.701 15.942 10.994 34.357 18.967 55.246 23.914 21.439 4.9474 43.977 7.4199 67.615 7.4199 29.685 0 58.545-4.1215 86.58-12.367 28.035-8.2457 52.772-20.616 74.211-37.107 21.439-17.041 38.48-38.203 51.123-63.49 13.193-25.837 19.791-56.071 19.791-90.703 0-29.685-4.6742-55.247-14.02-76.686-8.7954-21.439-20.064-40.405-33.807-56.896-13.743-17.041-28.86-32.156-45.352-45.35-15.942-13.743-30.784-27.211-44.527-40.404-13.743-13.743-25.286-28.037-34.631-42.879-8.7954-15.392-13.193-33.256-13.193-53.596 0-24.737 6.8707-43.152 20.613-55.246 13.743-12.643 32.16-18.967 55.248-18.967s39.029 5.4979 47.824 16.492c8.7954 10.994 13.193 23.637 13.193 37.93 0 13.743-3.5725 27.486-10.719 41.229-6.5966 13.193-15.393 23.089-26.387 29.686 9.8946 11.544 22.538 17.316 37.93 17.316 20.889 0 37.381-7.6959 49.475-23.088 12.094-15.942 18.141-36.008 18.141-60.195 0-22.538-5.2234-40.403-15.668-53.596-9.895-13.193-21.989-23.089-36.281-29.686s-28.859-10.72-43.701-12.369c-14.842-2.1989-27.211-3.2969-37.105-3.2969zm-252.69 94.258s-32.16 152.61-56.26 168.32c-24.1 15.711-176.71-16.449-176.71-16.449s152.61 32.16 168.32 56.26c15.711 24.1-16.449 176.71-16.449 176.71s32.16-152.61 56.26-168.32 176.71 16.449 176.71 16.449-152.61-32.159-168.32-56.26c-15.711-24.1 16.449-176.71 16.449-176.71z" fill="#ff008b"/>
+	</g>
+	</svg>
+</div>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1543845150"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1543845150"></script>
+<script type="text/javascript">
+    
+        var baseurl = '\/';
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1543845150"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/hardware/" title="Hardware" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/hardware/">
+          <b>1. </b>Hardware
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hardware/choose_servo/" title="Choose your servo-motor" class="dd-item active">
+        <a href="/hardware/choose_servo/">
+        Choose your servo-motor
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hardware/prepare_servo/" title="Prepare servo-motor" class="dd-item ">
+        <a href="/hardware/prepare_servo/">
+        Prepare servo-motor
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/software/" title="Software" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/software/">
+          <b>2. </b>Software
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/software/linux/" title="Linux" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/software/linux/">
+          Linux
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/software/windows/" title="Windows" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/software/windows/">
+          Windows
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/tutorials/" title="Tutorials" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tutorials/">
+          <b>3. </b>Tutorials
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/tutorials/robotic_arm/" title="Robotic Arm" class="dd-item ">
+        <a href="/tutorials/robotic_arm/">
+        Robotic Arm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/docs/" title="Documents" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/docs/">
+          <b>4. </b>Documents
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+	<ul>
+		<li>
+			<h5 style="text-align:left">&nbsp; More</h5>
+    </ki>
+	</ul>
+	
+    
+      <section id="shortcuts">
+		<h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/sensorimotor/website/"><i class='fab fa-fw fa-github'></i> Source code</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://sensorimotor.de/contact"><i class='fas fa-envelope'></i></i> &nbsp;Imprint</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/sensorimotor/website/edit/master/content/hardware/choose_servo.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Introduction</a> > <a href='/hardware/'>Hardware</a> > Choose your servo-motor
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Choose your servo-motor</h1>
+          
+
+        
+
+
+<p>The Sensorimotor-board is designed to work with most of the standard servo-motors that are easily available.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Motor-type</th>
+<th align="left">Requirements</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Standard-servo-motor</td>
+<td align="left">Potentiometer</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">operating voltage up to 12V</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">drive current up to 6A</td>
+</tr>
+
+<tr>
+<td align="left">DC-motor</td>
+<td align="left">single-phase</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">operating voltage up to 12V</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">drive current up to 6A</td>
+</tr>
+
+<tr>
+<td align="left">Solenoid</td>
+<td align="left">operating voltage up to 12V</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">drive current up to 6A</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Tested with:</strong></p>
+
+<p>Servo-motor Blue Bird BMS-L530MG</p>
+
+<p>DC-motor YG300R</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/hardware/" title="Hardware"> <i class="fas fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/hardware/prepare_servo/" title="Prepare servo-motor" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1543845150"></script>
+    <script src="/js/perfect-scrollbar.min.js?1543845150"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1543845150"></script>
+    <script src="/js/jquery.sticky.js?1543845150"></script>
+    <script src="/js/featherlight.min.js?1543845150"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1543845150"></script>
+    <script src="/js/highlight.pack.js?1543845150"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1543845150"></script>
+    <script src="/js/learn.js?1543845150"></script>
+    <script src="/js/hugo-learn.js?1543845150"></script>
+
+    <link href="/mermaid/mermaid.css?1543845150" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1543845150"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
