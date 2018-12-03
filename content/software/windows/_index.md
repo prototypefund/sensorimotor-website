@@ -56,24 +56,24 @@ motors.print_position(motors.get_position())
 motors.stop()
 ```
 
-Die `Sensorimotor` Klasse dient als Einstiegspunkt, und bildet den Motorstrang ab.
+An instance of the class `Sensorimotor` represents a strand of motors and controls the communication between them.
 
-Jeder motor kann sich in einem der verschiedenen Modi befinden:
+There are different modes that a motor can be in:
 
-- Position gibt die anzufahrende Position an, die der Motor versuchen wird zu erreichen
-- Velocity gibt eine konstante Geschwindigkeit an, welche erreicht werden soll.
-- Hold verwendet den Verzögerungsmodus [CSL](#CSL)
+- Position -> target-position the motor the motor moves to
+- Velocity -> target-velocity to be reached.
+- Hold -> uses the delay-modus [CSL](#CSL)
 
-Der Modus kann gewechselt werden, indem ein jeweiliger Befehl gesendet wird. Beispielsweise wechselt set_position automatisch in den Positionsmodus.
+The mode can be changed by sending the dedicated command. For example "set_position" automatically switches to popsition-mode.
 
-zusätzlich können dem Motor limits übergeben werden:
+additional commands that can be send to the motors:
 
-- `set_voltage_limit` regelt die Maximal abgegebene Spannung.
-- `set_limits` beschränkt den maximal möglichen Bewegungsbereich des Servos.
+- `set_voltage_limit` Limit the output voltage to the motor (p.e. if you want to use a 5V-motor)
+- `set_limits` limits the range of motion of your servo.
 
 ## C++
 
-Die gleichen methoden werden in der 'sensorimotor.so' Bibliothek definiert, daher ist die verwendung Analog zu den Beispielen oben.
+The same methods are defined int the 'sensorimotor.so' library, therefor the uage is analogous to the python library
 
 ```cpp
 ```

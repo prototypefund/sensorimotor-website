@@ -1,77 +1,76 @@
 +++
 title = "Linux"
 +++
-Setup unter Debian
+Setup on Debian
 
-Unterstützte version: 9 (Stretch)
+supported version: 9 (Stretch)
 
-Die Library besteht aus:
+The software consists of 
+- "libsensorimotor", a core library, written in C++
+- "pysensorimotor", a Python wrapper for easy development
+- embedded-firmware, which runs on the micro-controller and doesn't need to be modifyed (but can)
 
-- "libsensorimotor", einer Core Library, geschrieben in C++
-- "pysensorimotor", einem Python Wrapper für einfache Entwicklung.
-- embedded-Firmware, welche auf dem Mikrocontroller läuft und nicht angepasst werden muss (aber kann)
+Dependencies:
 
-Abhängigkeiten installieren:
-
-- C und C++ Compiler: `sudo apt install build-essential`
+- C and C++ Compiler: `sudo apt install build-essential`
 - Python3.6+ `sudo apt install python3-dev`
 - Scons `sudo apt install scons`
 
-Bibliotheken kompilieren:
+compile libraries:
 
 ```debian
-# auschecken der letzten stabilen version ("master")
+# check out the latest stable version ("master")
 git clone https://git.suprememachines.de/supreme/libsensorimotor.git
-# wechseln in das Projektverzeichnis
+# go to project directory
 cd libsensorimotor
-# Bauen
+# build
 scons
 ```
 
-Verwenden der Bibliotheken:
+library use:
 
 ## Python:
 
 ```python
 from src.sensorimotor import Sensorimotor
 
-# Strang representiert den RS232 Bus mit allen Motoren
+# Motors represents the RS485 Bus with all motors
 motors = Sensorimotor(number_of_motors=2)
 
-# Limitiere beide motoren auf eine schwache Spannung
+# Limit both motors to low voltage
 motors.set_voltage_limit([0.55, 0.55])
 
-# Aktiviere Motoren
+# Activate motors
 motors.start()
 
-# Fahre Position 0.0 mit beiden Motoren an
+# Move both motors to position 0.0
 motors.set_position([0.0, 0.0])
 
-# Erhalte ein Tupel mit den aktuellen Motorpositionen
+# Get a tuple with actual motor-positions
 motors.print_position(motors.get_position())
 
-# Deaktiviere Motoren, Keine weiteren Bewegungen werden ausgeführt
+# Deactivate motors, no more movements will be executed
 motors.stop()
 ```
 
-Die `Sensorimotor` Klasse dient als Einstiegspunkt, und bildet den Motorstrang ab.
+An instance of the class `Sensorimotor` represents a strand of motors and controls the communication between them.
 
-Jeder motor kann sich in einem der verschiedenen Modi befinden:
+There are different modes that a motor can be in:
 
-- Position gibt die anzufahrende Position an, die der Motor versuchen wird zu erreichen
-- Velocity gibt eine konstante Geschwindigkeit an, welche erreicht werden soll.
-- Hold verwendet den Verzögerungsmodus ([CSL](#CSL))
+- Position -> target-position the motor the motor moves to
+- Velocity -> target-velocity to be reached.
+- Hold -> uses the delay-modus [CSL](#CSL)
 
-Der Modus kann gewechselt werden, indem ein jeweiliger Befehl gesendet wird. Beispielsweise wechselt set_position automatisch in den Positionsmodus.
+The mode can be changed by sending the dedicated command. For example "set_position" automatically switches to popsition-mode.
 
-zusätzlich können dem Motor limits übergeben werden:
+additional commands that can be send to the motors:
 
-- `set_voltage_limit` regelt die Maximal abgegebene Spannung.
-- `set_limits` beschränkt den maximal möglichen Bewegungsbereich des Servos.
+- `set_voltage_limit` Limit the output voltage to the motor (p.e. if you want to use a 5V-motor)
+- `set_limits` limits the range of motion of your servo.
 
 ## C++
 
-Die gleichen methoden werden in der 'sensorimotor.so' Bibliothek definiert, daher ist die verwendung Analog zu den Beispielen oben.
+The same methods are defined in the 'sensorimotor.so' library, therefor the usage is analogous to the python library
 
-```c++
+```cpp
 ```
