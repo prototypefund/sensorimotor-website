@@ -1,28 +1,20 @@
 +++
-title = "Tutorials"
+title = "Introduction"
 +++
 <h1 class="mainpage_header">Sensorimotor</h1>
 
-<h2 class="header">Über unser Projekt</h2>
+<h2 class="header">About us</h2>
 
-<div class="content-spacing">
-<p>
-Wir entwickeln Open-Source-free-Design Hardware und Software für Robotik-Antriebe und wollen so die vielen kleinen Robotik-Projekte weltweit fördern und durch kostengünstige und modifikationsfreundliche Hardware die Kreativität der Entwickler*innen, Forscher*innen und Bastler*innen anregen und sie ein Stück weit unabhängiger von bestehenden industriellen Lösungen machen. Wir haben unsere Wurzeln in der universitären Robotik-Forschung und in der Maker-Szene und möchten unsere Entwicklungen den Robotikenthusiasten weltweit zugänglich machen.</p>
-<p>
-Roboter und KI halten Einzug in unseren Alltag. Wir glauben, dass die Entwicklung für die Menschheit vorteilhaft und sicher sein kann - wenn die zugrundeliegende Technologie frei von Interessen der Wenigen ist und in die Hände von Forscher*innen und Entwickler*innen weltweit gelegt wird. Hierfür sind freie Hardware-Designs entscheidend, denn sie stärken die Freiheit der Nutzer*innen und geben ihnen wieder Kontrolle über ihre Hardware. Mit freien Hardware-Designs können Maschinen auch endlich wieder repariert und modifiziert werden. Wir möchten zur Demokratisierung der Robotik beitragen, indem wir ein völlig freies Hardware-Design und die dazugehörige Software für Robotik-Antriebe entwickeln.<br><br>
-</p>
-<p>
-Ziel unseres Projektes ist es, die Nutzer*innen in die Lage zu versetzen, einfache Motoren in SmartServos zu verwandeln und somit für beliebige Robotikaufgaben einsetzbar zu machen. Hierfür haben wir eine Platine entwickelt, die mit zahlreichen DC-Motoren kompatibel ist und mit minimalem Aufwand angeschlossen werden kann. Mit ihr erhalten Nutzer*innen ein reichhaltiges sensorisches Feedback vom Motor (Winkel, Temperatur, Stromstärke, Spannung) und es gibt eine Vielzahl an Control-Modi, die eine exakte Regelung von Position, Geschwindigkeit und Drehmoment ermöglichen.
-</p>
-Die Kommunikation zu den Motoren erfolgt über ein standardisiertes Bus-System. Dadurch können bis zu 256 Motoren über eine Strecke von bis zu einem Kilometer miteinander gekoppelt werden und von einem einzigen Host-Controller gesteuert werden, was insbesondere für Automatisierungs- und Robotik-Projekte von großem Vorteil ist. Die Firmware ist in C/C++ geschrieben und wir verwenden ein open-source build/test system.
-<p>
-Aktuelles Ziel ist es, die fertige Hardware um notwendige Software zu ergänzen und somit für alle nutzbar zu machen. Mit einer Arduino-kompatiblen C/C++ Bibliothek und einer Raspberry Pi-kompatiblen Python-Bibliothek könnten alle Motoren im Bus für viele unterschiedliche Projekte komfortabel angesteuert werden.
-</p>
-<p>
-Wir wollen eine Alternative zu bestehenden hochpreisigen closed-source SmartServos anbieten. Durch unsere freie Hardware wird es ermöglicht, diese Technologie zu studieren, zu modifizieren und eigene Ideen darauf aufzusetzen. Dies gibt insbesondere kleineren, nicht finanzstarken Projekten mehr Unabhängigkeit und Möglichkeiten, denn: free hardware enables everybody.
-</p>
-<p>
-Unsere Zielgruppe sind Wissenschaftler*innen, Ausbilder*innen, Maker und Entwickler*innen kleinerer Unternehmen, insbesondere in strukturell schwächeren Regionen. Durch free-design Hardware besteht die Möglichkeit zur Modifikation und Eigenproduktion und damit einhergehend die Förderung unabhängiger Entwicklungen. Durch ausführliche Dokumentation, Tutorials und Veröffentlichung aller Schaltpläne auf einer Platform wie GitHub, wird ein weltweiter Wissenaustausch ermöglicht.
-</p>
-</div>
-</div>
+We develop open-source-free-design hardware and software for robotic drives and thus want to promote the many small robotics projects worldwide and stimulate the creativity of developers, researchers and hobbyists through cost-effective and modification-friendly hardware and make them a little more independent from existing industrial solutions. We have our roots in university robotics research and the maker scene and we want to make our developments accessible to robotics enthusiasts worldwide.
+
+Robots and AI are finding their way into our everyday lives. We believe that development can be beneficial and safe for humanity - if the underlying technology is free of the interests of the few and placed in the hands of researchers and developers worldwide. For this, free hardware designs are crucial, because they strengthen the freedom of users and give them back control of their hardware. With free hardware designs, machines can finally be repaired and modified again. We want to contribute to the democratization of robotics by developing a completely free hardware design and software for robotic drives
+
+The goal of our project is to enable users to turn simple motors into SmartServos and thus make them suitable for any robotics task. For this we have developed a board that is compatible with numerous DC motors and can be connected with minimal effort. It provides users with rich sensory feedback from the engine (angle, temperature, current, voltage) and a variety of control modes that provide precise position, speed and torque control.
+
+Communication with the motors takes place via a standardized bus system. As a result, up to 256 motors can be coupled together over a distance of up to one kilometer and controlled by a single host controller, which is particularly advantageous for automation and robotics projects. The firmware is written in C / C ++ and we use an open-source build / test system. We have developed a board that is compatible with numerous DC motors and can be connected with minimal effort. It provides users with rich sensory feedback from the engine (angle, temperature, current, voltage) and a variety of control modes that provide precise position, speed and torque control.
+
+The current goal is to supplement the finished hardware with necessary software and thus make it usable for everyone. With an Arduino-compatible C / C ++ library and a Raspberry Pi-compatible Python library, all motors in the bus could be conveniently controlled for many different projects.
+
+We want to offer an alternative to existing high-priced closed-source SmartServos. Our free hardware makes it possible to study, modify and apply this technology to this technology. This gives more independence and opportunities, especially for smaller, non-financially sound projects, because: __free hardware enables everybody__ .
+
+Our target group are scientists, trainers, makers and developers of smaller companies, especially in structurally weaker regions. Free-design hardware offers the possibility of modification and in-house production and, as a result, the promotion of independent developments. Extensive documentation, tutorials and publication of all circuit diagrams on a platform such as GitHub will enable a worldwide exchange of knowledge.
