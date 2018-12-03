@@ -1,12 +1,12 @@
 baseURL = "https://sensorimotor.de/"
-languageCode = "de-de"
-defaultContentLanguage = "de"
+languageCode = "en-us"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 title = "Sensorimotor"
 theme = "hugo-theme-learn"
 
 license = "MIT"
-homepage = "https://suprememachines.de"
+homepage = "https://sensorimotor.de"
 repo = "https://github.com/sensorimotor/docs"
 min_version = 0.49
 
@@ -19,20 +19,20 @@ min_version = 0.49
   home = [ "HTML", "RSS", "JSON"]
 
 [Languages]
-[Languages.de]
+[Languages.en]
 name = "Sensorimotor"
 title = "Sensorimotor"
-languageName = "German"
+languageName = "English"
 
 
-[[Languages.de.menu.shortcuts]]
-name = "<i class='fas fa-envelope'></i></i> &nbsp;Impressum"
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-envelope'></i></i> &nbsp;Imprint"
 identifier = "cn"
 url = "/contact"
 weight = 11
 
 
-[[Languages.de.menu.shortcuts]]
+[[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Source code"
 identifier = "ds"
 url = "https://github.com/sensorimotor/website/"
