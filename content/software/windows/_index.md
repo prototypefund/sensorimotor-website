@@ -1,58 +1,58 @@
 +++
 title = "Windows"
 +++
-Setup unter Windows
+Setup on a Windows system
 
-Unterstützte version: 7, 8, 10
+supported version: 7, 8, 10.
 
-Die Software besteht aus:
+The software consists of 
+- "libsensorimotor", a core library, written in C++
+- "pysensorimotor", a Python wrapper for easy development
+- embedded-firmware, which runs on the micro-controller and doesn't need to be modifyed (but can)
 
-- "libsensorimotor", einer Core Library, geschrieben in C++
-- "pysensorimotor", einem Python Wrapper für einfache Entwicklung.
-- embedded-Firmware, welche auf dem Mikrocontroller läuft und nicht angepasst werden muss (aber kann)
+Dependencies:
 
-Abhängigkeiten installieren:
-
-- C und C++ Compiler: [mingw](https://osdn.net/projects/mingw/releases/) (latest stable version)
+- C and C++ Compiler: [mingw](https://osdn.net/projects/mingw/releases/) (latest stable version)
 - [Python3.6+](https://www.python.org/downloads/windows/)
 - [Scons](https://scons.org/pages/download.html) (Production version)
 - [Git](https://git-scm.com/download/win)
 - Development IDE (z.B. Code::Blocks))
 
-Bibliotheken kompilieren:
+compile libraries:
 
-Auschecken der letzten stabilen version ("master"), falls git in den PATH installiert wurde kann dies über das terminal passieren:
+check out the latest stable version ("master")
+if git is installed at $PATH you can do that with the following terminal command:
 ```bash
 git clone https://git.suprememachines.de/supreme/libsensorimotor.git
 ```
-Bauen mit scons, ebenfalls über das terminal.
+build with scons, terminal command:
 ```bash
 scons
 ```
 
-Verwenden der Bibliotheken:
+library use:
 
 ## Python:
 
 ```python
 from src.sensorimotor import Sensorimotor
 
-# Strang representiert den RS232 Bus mit allen Motoren
+# Motors represents the RS485 Bus with all motors
 motors = Sensorimotor(number_of_motors=2)
 
-# Limitiere beide motoren auf eine schwache Spannung
+# Limit both motors to low voltage
 motors.set_voltage_limit([0.55, 0.55])
 
-# Aktiviere Motoren
+# Activate motors
 motors.start()
 
-# Fahre Position 0.0 mit beiden Motoren an
+# Move both motors to position 0.0
 motors.set_position([0.0, 0.0])
 
-# Erhalte ein Tupel mit den aktuellen Motorpositionen
+# Get a tuple with actual motor-positions
 motors.print_position(motors.get_position())
 
-# Deaktiviere Motoren, Keine weiteren Bewegungen werden ausgeführt
+# Deactivate motors, no more movements will be executed
 motors.stop()
 ```
 
