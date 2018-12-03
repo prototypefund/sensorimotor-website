@@ -1,7 +1,7 @@
 ---
-title: Roboter-Arm
+title: Robotic Arm
 weight: 1
 ---
 
 
-Für unseren Roboter-Arm haben wir die Baupläne des [MeArm PI](https://mime.co.uk/products/mearm-pi/) modifiziert.
+Our robotic arm is based on the [MeArm PI](https://mime.co.uk/products/mearm-pi/).
